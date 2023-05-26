@@ -27,8 +27,10 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t hugoed/docker-graphql:0.0.2 .
+        docker build -t hugoed/docker-graphql:latest .
     - name: Push Docker Image
       run: |
         docker push hugoed/docker-graphql:0.0.2 
+        docker push hugoed/docker-graphql:latest
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
